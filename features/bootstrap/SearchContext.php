@@ -48,6 +48,6 @@ class SearchContext extends MinkContext
      */
     public function heShouldFind($result)
     {
-        throw new PendingException();
+        $this->assertElementContains('.mw-search-results', $result);
     }
 }
