@@ -32,14 +32,14 @@ class SearchContext extends MinkContext
      */
     public function thereShouldBeNoResults()
     {
-        throw new PendingException();
+        $this->assertElementContains('.mw-search-nonefound', 'There were no results matching the query.');
     }
 
     /**
      * @Given /^there should be a Did-you-mean suggestion for "([^"]*)"$/
      */
-    public function thereShouldBeADidYouMeanSuggestionFor($arg1)
+    public function thereShouldBeADidYouMeanSuggestionFor($word)
     {
-        throw new PendingException();
+        $this->assertElementContainsText('.searchdidyoumean a em', $word);
     }
 }
