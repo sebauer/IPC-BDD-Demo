@@ -27,7 +27,7 @@ class FeatureContext extends BehatContext
      */
     public function __construct(array $parameters)
     {
-        // Initialize your context here
+        $this->useContext('SearchContext', new SearchContext($parameters));
     }
 
 //
