@@ -46,7 +46,7 @@ class SearchContext extends MinkContext
  	/**
      * @Then /^he should find "([^"]*)"$/
      */
-    public function heShouldFind($arg1)
+    public function heShouldFind($result)
     {
         throw new PendingException();
     }
