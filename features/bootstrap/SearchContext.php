@@ -42,4 +42,12 @@ class SearchContext extends MinkContext
     {
         $this->assertElementContainsText('.searchdidyoumean a em', $word);
     }
+    
+ 	/**
+     * @Then /^he should find "([^"]*)"$/
+     */
+    public function heShouldFind($arg1)
+    {
+        throw new PendingException();
+    }
 }
