@@ -1,9 +1,9 @@
 <?php
 
-use Behat\Behat\Context\BehatContext,
+use Behat\MinkExtension\Context\MinkContext,
     Behat\Behat\Exception\PendingException;
 
-class SearchContext extends BehatContext
+class SearchContext extends MinkContext
 {
     public function __construct(array $parameters)
     {
@@ -15,15 +15,16 @@ class SearchContext extends BehatContext
      */
     public function aUserIsOnTheEnglishWikipedia()
     {
-        throw new PendingException();
+        $this->visit('http://en.wikipedia.org/wiki/Main_Page');
     }
 
     /**
      * @When /^he searches for "([^"]*)"$/
      */
-    public function heSearchesFor($arg1)
+    public function heSearchesFor($query)
     {
-        throw new PendingException();
+        $this->fillField('search', $query);
+        $this->pressButton('searchButton');
     }
 
     /**
