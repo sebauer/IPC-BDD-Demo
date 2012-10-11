@@ -1,8 +1,8 @@
 IPC-BDD-Demo
 ============
 
-Installation
-------------
+Installation & Running
+----------------------
 1. Install dependencies using composer. This might take a while
 > php composer.phar install
 
