@@ -1,6 +1,8 @@
 <?php
 
-use Behat\MinkExtension\Context\MinkContext,
+use Behat\Mink\Selector\SelectorsHandler,
+    Behat\Mink\Selector\CssSelector,
+    Behat\MinkExtension\Context\MinkContext,
     Behat\Behat\Exception\PendingException;
 
 class SearchContext extends MinkContext
@@ -49,5 +51,15 @@ class SearchContext extends MinkContext
     public function heShouldFind($result)
     {
         $this->assertElementContains('.mw-search-results', $result);
+    }
+    
+    /**
+     * @Then /^he should find "([^"]*)" on position "([^"]*)"$/
+     */
+    public function heShouldFindOnPosition($result, $position)
+    {
+        $page = $this->getSession()->getPage();
+        $cssSelector = sprintf('.mw-search-results>li:nth-of-type(%s) .mw-search-result-heading', $position);
+        $this->assertElementContainsText($cssSelector, $result);
     }
 }

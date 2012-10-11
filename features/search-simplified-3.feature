@@ -16,9 +16,9 @@ Feature: Did-you-mean for Wikipedia Search
 	    
 	    Examples:
 	    | position | result                   |
-	    |     0    | Deutsches Brauereimuseum |
-	    |     1    | Beer in Germany          |
-	    |     2    | Paulaner Brewery         |
-	    |     3    | Veltins                  |
-	    |     4    | Beck's Brewery           |
+	    |     1    | Deutsches Brauereimuseum |
+	    |     2    | Beer in Germany          |
+	    |     3    | Paulaner Brewery         |
+	    |     4    | Veltins                  |
+	    |     5    | Beck's Brewery           |
 	    
