@@ -5,15 +5,6 @@ use Behat\MinkExtension\Context\RawMinkContext;
 class SearchContext extends RawMinkContext
 {
     /**
-     * @When /^he searches for "([^"]*)"$/
-     */
-    public function heSearchesFor($query)
-    {
-        $this->getSession()->getPage()->fillField('search', $query);
-        $this->getSession()->getPage()->pressButton('searchButton');
-    }
-
-    /**
      * @Then /^there should be no results$/
      */
     public function thereShouldBeNoResults()

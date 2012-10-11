@@ -11,4 +11,13 @@ class UserContext extends RawMinkContext
     {
         $this->getSession()->visit('http://en.wikipedia.org/wiki/Main_Page');
     }
+    
+ 	/**
+     * @When /^he searches for "([^"]*)"$/
+     */
+    public function heSearchesFor($query)
+    {
+        $this->getSession()->getPage()->fillField('search', $query);
+        $this->getSession()->getPage()->pressButton('searchButton');
+    }
 }
