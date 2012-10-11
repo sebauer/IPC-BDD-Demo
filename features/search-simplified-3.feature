@@ -12,13 +12,13 @@ Feature: Did-you-mean for Wikipedia Search
 	  # Positive Example  
 	  Scenario Outline: Search results for successful search
 	    When he searches for "german brewery"
-	    Then he should find "<result>"
+	    Then he should find "<result>" on position "<position>"
 	    
 	    Examples:
-	    | result |
-	    | Deutsches Brauereimuseum |
-	    | Beer in Germany |
-	    | Paulaner Brewery |
-	    | Veltins |
-	    | Beck's Brewery |
+	    | position | result                   |
+	    |     0    | Deutsches Brauereimuseum |
+	    |     1    | Beer in Germany          |
+	    |     2    | Paulaner Brewery         |
+	    |     3    | Veltins                  |
+	    |     4    | Beck's Brewery           |
 	    
