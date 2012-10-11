@@ -15,10 +15,10 @@ Feature: Did-you-mean for Wikipedia Search
 	    Then he should find "<result>"
 	    
 	    Examples:
-	    | result |
+	    | result                   |
 	    | Deutsches Brauereimuseum |
-	    | Beer in Germany |
-	    | Paulaner Brewery |
-	    | Veltins |
-	    | Beck's Brewery |
+	    | Beer in Germany          |
+	    | Paulaner Brewery         |
+	    | Veltins                  |
+	    | Beck's Brewery           |
 	    
