@@ -10,15 +10,7 @@ Feature: Did-you-mean for Wikipedia Search
 	    And there should be a Did-you-mean suggestion for "fürsteneck"
 	
 	  # Positive Example  
-	  Scenario Outline: Search results for successful search
+	  Scenario: Search results for successful search
 	    When he searches for "german brewery"
-	    Then he should find "<result>"
-	    
-	    Examples:
-	    | result |
-	    | Deutsches Brauereimuseum |
-	    | Beer in Germany |
-	    | Paulaner Brewery |
-	    | Veltins |
-	    | Beck's Brewery |
-	    
+	    Then he should find "Deutsches Brauereimuseum"
+	    And he should find "Beer in Germany"
